@@ -1,0 +1,3 @@
+period,year_count,average_summer_mean_temp_c,average_summer_total_rainfall_mm,average_hot_days_ge_33c,average_rainy_days_ge_0_1mm
+early_1991_2000,10,28.466195652173912,1414.51,7.0,56.6
+recent_2016_2025,10,29.22869565217392,1257.79,31.2,60.5

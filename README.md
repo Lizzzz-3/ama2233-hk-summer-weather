@@ -18,6 +18,45 @@ AMA2233 Data Analytics and Visualization 课程小组项目。
 
 数据尚未分析，仓库中的计划不代表实际研究结果。
 
+## 当前进度
+
+项目总体计划的前两步已经实现：
+
+- 三份香港天文台原始日数据已保存到 `data/raw/`。
+- 已完成 1991–2025 年 6–8 月数据的清洗、日期合并和完整性检查。
+- 已生成年度、月度、早期和近期汇总指标。
+- `notebooks/01_data_preparation_and_metrics.ipynb` 可以从原始 CSV 重建全部表格。
+
+## 运行方法
+
+需要 Python 3.13 和 [uv](https://docs.astral.sh/uv/)。
+
+```bash
+uv sync --all-groups
+uv run hk-weather build
+```
+
+生成文件位于 `data/processed/` 和 `data/metrics/`。运行测试和质量检查：
+
+```bash
+uv run pytest
+uv run ruff check .
+uv run basedpyright
+```
+
+## 目录结构
+
+| 目录 | 用途 |
+| --- | --- |
+| `data/raw/` | 香港天文台原始 CSV |
+| `data/processed/` | 清洗合并后的逐日表与完整性表 |
+| `data/metrics/` | 年度、月度和时期汇总指标 |
+| `notebooks/` | 可复现分析 Notebook |
+| `figures/` | 后续五张核心图 |
+| `reports/` | 论文、结果摘要和视频材料 |
+| `src/` | 数据处理代码 |
+| `tests/` | 单元与端到端测试 |
+
 ## 一起修改
 
 组员可以直接在GitHub网页上操作。尚未添加为协作者时，按以下步骤提交修改：

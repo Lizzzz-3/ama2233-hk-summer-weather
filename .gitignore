@@ -2,6 +2,10 @@
 .ipynb_checkpoints/
 __pycache__/
 .venv/
+.uv-cache/
+.pytest_cache/
+.ruff_cache/
+.basedpyright/
 .env
 .env.*
 project guide.docx
