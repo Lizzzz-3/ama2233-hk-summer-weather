@@ -1,6 +1,6 @@
 # 图表
 
-第三步的图 5 已完成；图 1–4 待其他组员制作。
+第三步的图 4、5 已完成，图 2 也已有 PNG、SVG 和 Notebook；图 1、3 待其他组员制作。
 
 ## 图 5：夏季温度与降雨量关联
 
@@ -17,3 +17,14 @@
 ```bash
 uv run jupyter nbconvert --to notebook --execute --inplace notebooks/02_figure05_temperature_rainfall.ipynb
 ```
+
+## 图 4：各月雨量对比
+
+- [PNG（300 dpi）](04_monthly_rainfall_comparison.png)、[SVG](04_monthly_rainfall_comparison.svg)
+- [中文分步骤 Notebook](../notebooks/02_figure04_monthly_rainfall.ipynb)
+- [独立 Python 程序](../scripts/figure04_monthly_rainfall.py)
+- [数值核查表](../reports/figure04_values.csv)、[运行和上传说明](../reports/figure04_使用说明.md)
+
+香港天文台站，6–8 月，比较 1991–2000 与 2016–2025，各 10 个完整夏季。柱高为平均月总雨量（mm）。程序从三份原始 CSV 复算并核对现有指标。早期蓝色 `#246C8A`、近期橙色 `#C05A37`，图三应采用相同配色。
+
+在项目根目录运行 `python scripts/figure04_monthly_rainfall.py`（需要 Matplotlib），或打开 Notebook 点击 Run All。
