@@ -26,7 +26,7 @@ AMA2233 Data Analytics and Visualization 课程小组项目。
 - 已完成 1991–2025 年 6–8 月数据的清洗、日期合并和完整性检查。
 - 已生成年度、月度、早期和近期汇总指标。
 - `notebooks/01_data_preparation_and_metrics.ipynb` 可以从原始 CSV 重建全部表格。
-- 第三步的图 5（温度与降雨量关联散点图及拟合线）已完成，见 `figures/05_temperature_rainfall_scatter.png`；图 1–4 待制作。
+- 第三步的图 5（温度与降雨量关联散点图及拟合线）已完成，见 `figures/05_temperature_rainfall_scatter.png`；图 2 已有图像和程序；图 4 已完成，图 1、3 待制作。
 
 ## 运行方法
 
@@ -52,6 +52,14 @@ uv run jupyter nbconvert --to notebook --execute --inplace notebooks/02_figure05
 ```
 
 也可在 Jupyter 中打开该 Notebook，从头运行。输出为 `figures/05_temperature_rainfall_scatter.png`（300 dpi）和同名 SVG 矢量图。图表说明见 [figures/README.md](figures/README.md)。
+
+只重新生成图 4（从仓库原始数据复算并核对月度指标）：
+
+```bash
+uv run python scripts/figure04_monthly_rainfall.py
+```
+
+也可打开 `notebooks/02_figure04_monthly_rainfall.ipynb` 点击 Run All。输出为 `figures/04_monthly_rainfall_comparison.png`（300 dpi）和同名 SVG；详见 [图四运行说明](reports/figure04_使用说明.md)。
 
 ## 目录结构
 
